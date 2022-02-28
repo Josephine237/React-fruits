@@ -8,8 +8,8 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
-.container {
-  max-width: 26rem;
+.container {  /* POZOR .container nemůžu dát za header, musí být před ní */
+  max-width: 46rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -21,21 +21,40 @@ header {
   margin-top: 4rem;
 }
 
-.logo {
-  width: 10rem;
-  height: 10rem;
-  background-image: url(./img/rocket.svg);
-  background-size: contain;
-}
-
 .fruits {
-  width: 30%;
+  display: flex;    
 }
 
 .apples {
-  background-position: right;
+  width: 50%;
 }
 
 .pears {
-  background-position: left;
+  width: 50%; 
 }
+
+
+/*  dá se to napsat i takto
+  .fruits {
+
+  }
+
+  .apples {
+    width: 50%;
+    float: left;
+  }
+
+  .pears {
+    width: 50%;
+    float: left;
+  }
+
+
+a nebo se to dá napsat pomocí  css grid
+
+  .fruits {
+    display: grid;
+    grid-template-comlumns: auto auto;
+  }
+
+*/
